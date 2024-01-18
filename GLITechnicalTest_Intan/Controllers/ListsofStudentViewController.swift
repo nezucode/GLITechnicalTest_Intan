@@ -64,6 +64,8 @@ class ListsofStudentViewController: UIViewController {
         setupUI()
     }
     
+    
+    //MARK: - UI Setup
     private func setupUI(){
         self.view.addSubview(imageView)
         self.view.addSubview(titleName)

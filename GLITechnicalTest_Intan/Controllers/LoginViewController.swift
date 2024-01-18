@@ -38,6 +38,14 @@ class LoginViewController: UIViewController {
         self.loginButton.addTarget(self, action: #selector(checkLogin), for: .touchUpInside)
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+
+    override var shouldAutorotate: Bool {
+        return false
+    }
+    
     //MARK: - UI Setup
     private func setupUI() {
         view.addSubview(imageView)
@@ -61,7 +69,7 @@ class LoginViewController: UIViewController {
             self.imageViewJJK.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 12),
             self.imageViewJJK.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             self.imageViewJJK.widthAnchor.constraint(equalToConstant: 240),
-            self.imageViewJJK.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            self.imageViewJJK.heightAnchor.constraint(equalTo: imageView.heightAnchor),
             
             self.usernameField.topAnchor.constraint(equalTo: imageViewJJK.bottomAnchor, constant: 28),
             self.usernameField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
